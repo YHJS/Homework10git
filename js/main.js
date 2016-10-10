@@ -1,4 +1,4 @@
-
+// -------------calculator--------------start----------
         document.getElementById("button-reset").addEventListener('click',Reset,false);
         document.getElementById("button-percent").addEventListener('click',percent,false);
         document.getElementById("button-SquareRoot").addEventListener('click',SquareRoot,false);
@@ -63,3 +63,18 @@
     function SquareRoot() {
         document.calculator.display.value = Math.sqrt(parseFloat(document.calculator.display.value));
     }
+// -------------calculator--------------end------
+// -------------changeColor------------start------
+
+var test = document.getElementById("main-container");
+    test.addEventListener('mouseenter',changeColor,false);
+
+function changeColor() {
+    debugger;
+    var r = _.random(0, 255),
+        g = _.random(0, 255),
+        b = _.random(0, 255),
+        color = 'rgb'+'('+r+','+g+ ','+b+')';
+    test.style.backgroundColor = color;
+}
+// -------------changeColor-------------end------
